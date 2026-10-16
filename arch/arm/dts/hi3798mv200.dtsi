@@ -75,6 +75,15 @@
 			      IRQ_TYPE_LEVEL_LOW)>;
 	};
 
+	reg_vbus: vbus-regulator {
+		compatible = "regulator-fixed";
+		regulator-name = "vbus";
+		regulator-min-microvolt = <5000000>;
+		regulator-max-microvolt = <5000000>;
+		regulator-always-on;
+		regulator-boot-on;
+	};
+
 	/* Initialization is done in boot loader */
 	usb2_phy1: hsusb1_phy {
 		compatible = "usb-nop-xceiv";
@@ -190,6 +199,7 @@
 			clock-names = "bus", "clk12", "clk48";
 			resets = <&crg 0xb8 12>;
 			reset-names = "bus";
+			vbus-supply = <&reg_vbus>;
 			status = "disabled";
 		};
 
@@ -207,6 +217,7 @@
 			reset-names = "bus", "phy", "utmi";
 			phys = <&usb2_phy1>;
 			phy-names = "usb";
+			vbus-supply = <&reg_vbus>;
 			status = "disabled";
 		};
 

@@ -24,7 +24,7 @@
 
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x0 0x0 0x80000000>;
+		reg = <0x0 0x0 0x0 0x40000000>;
 	};
 };
 
@@ -36,33 +36,14 @@
 	fifo-depth = <256>;
 	clock-frequency = <200000000>;
 	cap-mmc-highspeed;
-	mmc-ddr-1_8v;
-	mmc-hs200-1_8v;
+	//mmc-ddr-1_8v;
+	//mmc-hs200-1_8v;
 	non-removable;
 	bus-width = <8>;
 	status = "okay";
 };
 
-&gmac {
-	status = "okay";
-	#address-cells = <1>;
-	#size-cells = <0>;
-	phy-handle = <&eth_phy1>;
-	phy-mode = "rgmii";
-	hisilicon,phy-reset-delays-us = <10000 10000 30000>;
-
-	eth_phy1: phy@3 {
-		reg = <3>;
-	};
-};
-
 &ohci {
-	status = "okay";
-};
-
-&sd0 {
-	bus-width = <4>;
-	cap-sd-highspeed;
 	status = "okay";
 };
 
