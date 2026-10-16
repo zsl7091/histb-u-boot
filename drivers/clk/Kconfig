@@ -246,6 +246,11 @@ config CLK_ZYNQMP
 	  This clock driver adds support for clock realted settings for
 	  ZynqMP platform.
 
+config CRG_HI3798MV200
+    bool "Clock driver for Hisilicon Hi3798MV2x SoC"
+    depends on CLK
+    help
+      Enable CRG clock controller support for Hisilicon Hi3798MV2x SoCs.
 source "drivers/clk/analogbits/Kconfig"
 source "drivers/clk/at91/Kconfig"
 source "drivers/clk/exynos/Kconfig"
