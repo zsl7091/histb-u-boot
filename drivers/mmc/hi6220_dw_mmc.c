@@ -91,7 +91,7 @@ static const struct hisi_mmc_data hi3660_mmc_data = {
 };
 
 static const struct hisi_mmc_data hi6220_mmc_data = {
-	.clock = 50000000,
+	.clock = 200000000,
 	.use_fifo = false,
 };
 
