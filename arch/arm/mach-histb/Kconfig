@@ -21,14 +21,13 @@ config TARGET_HC2910_2AGHD05
 	help
 	  Support for Skyworth HC2910 with board label 2AGHD05. This board features:
 	  - Hisilicon Hi3798MV200 SoC (4xCortex-A53, Mali MP-450)
-	  - 2GiB DRAM
+	  - 1GiB DRAM
 	  - 8GiB eMMC, uSD slot
-	  - Wifi and Bluetooth module
-	  - 1x USB 2.0, 1x USB 3.0 host port
+	  - 2x USB 2.0 host port
 	  - HDMI
 	  - SCI
-	  - 3 LED - power, Wifi, Lock(?)
-	  - 1x Fast Ethernet Controller, 1x GBe Ethernet Controller
+	  - 1 LED - power
+	  - 1x Fast Ethernet Controller
 
 endchoice
 
